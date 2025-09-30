@@ -5,10 +5,18 @@
 The rules and requirements:
 
 - Create a Calculator ( Terminal or Gui (personal pref.) )
-- Everytime you create the calculator you MUST do something different in the next iteration.
+
+- Everytime you create the calculator you MUST do something different in the next iteration,
+  this means, for example: if you use a switch statement the next iteration you cannot do that,
+  you also cannot flip flop back and forth (i.e. switch, then if, then switch again) unless
+  it is genuinely doing something different (even if it's just semantic logic).
+  
 - You will hit a wall, this is to be expected.
-- Once you have really really tried to get over this wall and still can't think of any alternative, proceed to next step.
+
+- Once you have really really tried to get over this wall and still can't think of any alternative solutions, proceed to next step.
+
 - Begin compiling your code with older compiler version, i.e. instead of c++2x go to c++1x all the way to pre C++98.
+
 - Refactor your hardstuck iteration so that it is C++98 compatible!
 
 Whats the point in all this?

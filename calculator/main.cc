@@ -1,32 +1,31 @@
 // older versions can be seen within the commit history.
+// WIP
+#include <stdio.h>
 
-#include <iostream>
+#define list \
+ o(add, double, x + y) \
+ o(multi, double, x * y) \
+ o(sub, double, x - y) \
+ o(divi, double, x / y)
 
-int add  (int x, int y) { return x + y; }
-int divi (int x, int y) { return x / y; }
-int mul  (int x, int y) { return x * y; }
-int sub  (int x, int y) { return x - y; }
+#define o(name, type, expr) \
+ type name(type x, type y){ \
+ return expr; \
+}
 
-int input() { int x {}; std::cin >> x; return x; }
+list
+#undef o
 
 int main()
 {
-  std::cout << "first num" << std::endl;
-  int x { input() };
-  std::cout << "second num" << std::endl;
-  int y { input() };
+  int x = getchar() - '0';
+  int y = getchar() - '0';
+  int z = getchar() - '0';
 
-  std::cout << "operator selection" << std::endl;
-  int z { input() };
-
-  switch(z)
-  {
-  	case 1: std::cout << x << " + " << y << " = " << add(x, y)  << std::endl; break;
-  	case 2: std::cout << x << " / " << y << " = " << divi(x, y) << std::endl; break;
-  	case 3: std::cout << x << " * " << y << " = " << mul(x, y)  << std::endl; break;
-  	case 4: std::cout << x << " - " << y << " = " << sub(x, y)  << std::endl; break;
-  	default: std::cout << "error in selection" << std::endl; break; return 0; 
-  }
-  
+  if(z == 1) printf("%f", add((double)x, (double)y));
+  if(z == 2) printf("%f", multi((double)x,(double) y));
+  if(z == 3) printf("%f", sub((double)x,(double) y));
+  if(z == 4) printf("%f", divi((double)x, (double)y));
+	
 	return 0;
 }

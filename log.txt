@@ -1,3 +1,11 @@
 This is to be used as a development log, so you can keep track and just brainstorm ideas:
 
+so the first iteration is just a standard way I'd say to do a calculator,
+5 functions (add, divi, userInput etc.) and a switch case.
 
+iteration two notes:
+created a calc function, instead of the switch i have 4 ifs,
+thought about templating but I just dislike how this looks in a whole.
+went for an xmacro for this.
+
+also got rid of iostream.
